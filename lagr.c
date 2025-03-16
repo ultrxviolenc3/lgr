@@ -56,7 +56,11 @@ for(int j=0;j<=M;j++){
         max_error=error;
     }
 } 
- double th=1.0/(2.0*n*factorial(n));
+double power_of_2=1.0;
+for (int i=0; i<n;i++) {
+    power_of_2*=2;
+}
+ double th=1.0/(factorial(n)*power_of_2);
  fprintf(file,"%2d\t%.10e\t%.10e\n",n,max_error,th);
 }
     return 0;
